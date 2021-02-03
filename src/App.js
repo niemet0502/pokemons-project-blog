@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Pikachu from "./components/Pikachu/Pikachu"
+import Bulbizarre from "./components/Bulbizarre/Bulbizarre"
+import Abra from "./components/Abra/Abra"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Pikachu</Link>
+              </li>
+              <li>
+                <Link to="/abra">Abra</Link>
+              </li>
+              <li>
+                <Link to="/bulbizarre">Bulbizarre</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </Router>
     </div>
   );
 }
