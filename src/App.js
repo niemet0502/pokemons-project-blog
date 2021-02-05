@@ -25,6 +25,17 @@ function App() {
               </li>
             </ul>
           </nav>
+          <Switch>
+            <Route path="/abra">
+              <Abra />
+            </Route>
+            <Route path="/bulbizarre">
+              <Bulbizarre />
+            </Route>
+            <Route path="/">
+              <Pikachu />
+            </Route>
+          </Switch>
         </div>
       </Router>
     </div>
